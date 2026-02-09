@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    .collapsible {
+      background-color: #f0f0f0;
+      color: #333;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .collapsible:hover {
+      background-color: #e0e0e0;
+    }
+
+    .content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-top: none;
+      padding: 0 15px;
+    }
+
+    .content.show {
+      max-height: 500px;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to My Website</h1>
+  
+  <!-- Collapsible Section -->
+  <button class="collapsible">What I Care About Right Now</button>
+  <div class="content">
+    <p>I am interested in helping musicians connect with the right people, such as band members, collaborators, and teachers. I care about reducing the time and frustration musicians face when trying to find opportunities and build sustainable careers. I want to explore simple tools that let musicians focus more on making music.</p>
+  </div>
+
+  <script>
+    const collapsible = document.querySelector('.collapsible');
+    const content = document.querySelector('.content');
+
+    collapsible.addEventListener('click', function() {
+      content.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
