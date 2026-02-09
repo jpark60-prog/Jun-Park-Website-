@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -41,12 +42,40 @@
             margin-top: 1.5rem;
         }
 
-        .portfolio-item {
+        .portfolio-item,
+        .purpose-section {
             background: #ffffff;
             padding: 20px;
             margin-top: 16px;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .toggle-heading {
+            cursor: pointer;
+            font-size: 1.5rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.5rem;
+            user-select: none;
+        }
+
+        .toggle-heading:hover {
+            color: #007AFF;
+        }
+
+        .toggle-content {
+            display: none;
+            background: #ffffff;
+            padding: 20px;
+            margin-top: 16px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .toggle-content.open {
+            display: block;
         }
 
         footer {
@@ -66,6 +95,16 @@
             entrepreneurship, and the global music industry.
         </p>
 
+        <!-- Purpose section (always visible) -->
+        <h2>Purpose</h2>
+        <div class="purpose-section">
+            <p>
+                I am interested in helping musicians connect with the right people, such as band members, collaborators, and teachers.
+                I care about reducing the time and frustration musicians face when trying to find opportunities and build sustainable careers.
+                I want to explore simple tools that let musicians focus more on making music.
+            </p>
+        </div>
+
         <h2>Portfolio</h2>
 
         <div class="portfolio-item">
@@ -76,9 +115,26 @@
             </p>
         </div>
 
+        <!-- Interactive section -->
+        <h2 class="toggle-heading" onclick="toggleSection()">What I Care About Right Now</h2>
+        <div class="toggle-content" id="careSection">
+            <p>
+                I am interested in helping musicians connect with the right people, such as band members, collaborators, and teachers.
+                I care about reducing the time and frustration musicians face when trying to find opportunities and build sustainable careers.
+                I want to explore simple tools that let musicians focus more on making music.
+            </p>
+        </div>
+
         <footer>
             © 2026 Jun Park
         </footer>
     </div>
+
+    <script>
+        function toggleSection() {
+            const section = document.getElementById('careSection');
+            section.classList.toggle('open');
+        }
+    </script>
 </body>
 </html>
