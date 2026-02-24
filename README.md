@@ -51,6 +51,22 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         }
 
+        /* CTA button */
+        .cta-button {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 12px 20px;
+            background-color: #007AFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .cta-button:hover {
+            background-color: #005FCC;
+        }
+
         .toggle-heading {
             cursor: pointer;
             font-size: 1.5rem;
@@ -95,7 +111,7 @@
             entrepreneurship, and the global music industry.
         </p>
 
-        <!-- Purpose section (always visible) -->
+        <!-- Purpose section -->
         <h2>Purpose</h2>
         <div class="purpose-section">
             <p>
@@ -113,6 +129,22 @@
                 Served as a drummer in the Republic of Korea Navy Band, performing in official
                 military events, concerts, and national ceremonies.
             </p>
+        </div>
+
+        <!-- What I'm Building -->
+        <h2>What I’m Building</h2>
+        <div class="portfolio-item">
+            <p>
+                I am building a simple platform that helps musicians find the right collaborators and teachers more efficiently.
+            </p>
+            <p>
+                It is designed for emerging musicians, especially students who are actively looking to form bands and creative partnerships.
+            </p>
+            <p>
+                The goal is to reduce the time, friction, and uncertainty musicians face when trying to connect with the right people.
+            </p>
+
+            <a href="mailto:jpark60@berklee.edu" class="cta-button">Contact Me</a>
         </div>
 
         <!-- Interactive section -->
