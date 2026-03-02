@@ -56,8 +56,7 @@
             color: var(--muted);
         }
 
-        .portfolio-item,
-        .purpose-section {
+        .card {
             background: var(--card);
             padding: 22px;
             margin-top: 16px;
@@ -66,7 +65,7 @@
             border: 1px solid var(--border);
         }
 
-        /* 🔥 CTA BUTTON POLISH */
+        /* CTA */
         .cta-button {
             display: inline-block;
             background: var(--primary);
@@ -91,13 +90,9 @@
             outline-offset: 2px;
         }
 
+        /* Toggle */
         .toggle-heading {
             cursor: pointer;
-            font-size: 1.5rem;
-            margin-top: 3rem;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 0.5rem;
             user-select: none;
             transition: color 0.15s ease;
         }
@@ -108,12 +103,6 @@
 
         .toggle-content {
             display: none;
-            background: var(--card);
-            padding: 22px;
-            margin-top: 16px;
-            border-radius: 12px;
-            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
-            border: 1px solid var(--border);
         }
 
         .toggle-content.open {
@@ -126,7 +115,7 @@
             color: var(--muted);
         }
 
-        /* 📱 MOBILE SAFETY (bonus but minimal) */
+        /* Mobile */
         @media (max-width: 640px) {
             .container {
                 padding: 56px 18px;
@@ -142,25 +131,26 @@
 <body>
     <div class="container">
         <h1>Jun Park</h1>
+
         <p class="bio">
-            I am a student at Berklee College of Music, focusing on music and business.
+            I am a student at Berklee College of Music focused on music and business.
             With a background as a drummer, I am interested in the intersection of music,
             entrepreneurship, and the global music industry.
         </p>
 
         <!-- Purpose -->
         <h2>Purpose</h2>
-        <div class="purpose-section">
+        <div class="card">
             <p>
-                I am interested in helping musicians connect with the right people, such as band members, collaborators, and teachers.
-                I care about reducing the time and frustration musicians face when trying to find opportunities and build sustainable careers.
-                I want to explore simple tools that let musicians focus more on making music.
+                I am interested in helping musicians connect with the right collaborators,
+                band members, and teachers. My goal is to reduce the time and frustration
+                musicians face when searching for opportunities so they can focus more on creating music.
             </p>
         </div>
 
         <!-- Portfolio -->
         <h2>Portfolio</h2>
-        <div class="portfolio-item">
+        <div class="card">
             <strong>Republic of Korea Navy Band</strong>
             <p>
                 Served as a drummer in the Republic of Korea Navy Band, performing in official
@@ -170,15 +160,10 @@
 
         <!-- What I'm Building -->
         <h2>What I'm Building</h2>
-        <div class="purpose-section">
+        <div class="card">
             <p>
-                I am building a simple platform that helps musicians find band members, collaborators, and teachers.
-            </p>
-            <p>
-                It is for musicians who are tired of wasting time searching across multiple platforms.
-            </p>
-            <p>
-                It solves the problem of slow, frustrating, and scattered music networking.
+                I am building a simple platform that helps musicians find band members,
+                collaborators, and teachers in one place.
             </p>
 
             <p style="margin-top:22px;">
@@ -187,12 +172,15 @@
         </div>
 
         <!-- Interactive -->
-        <h2 class="toggle-heading" onclick="toggleSection()">What I Care About Right Now</h2>
-        <div class="toggle-content" id="careSection">
+        <h2 class="toggle-heading" onclick="toggleSection()">
+            What I Care About Right Now
+        </h2>
+
+        <div class="card toggle-content" id="careSection">
             <p>
-                I am interested in helping musicians connect with the right people, such as band members, collaborators, and teachers.
-                I care about reducing the time and frustration musicians face when trying to find opportunities and build sustainable careers.
-                I want to explore simple tools that let musicians focus more on making music.
+                Right now, I am focused on improving how musicians discover each other
+                and build meaningful creative networks without wasting time across
+                multiple platforms.
             </p>
         </div>
 
